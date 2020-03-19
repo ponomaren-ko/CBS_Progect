@@ -11,7 +11,7 @@ namespace Test2077
         static void Main(string[] args)
         {
             Console.WriteLine("Tse Peremoga!");
-            Console.WriteLine("Tse Peremoga2!");
+            Console.WriteLine("Tse Peremoga2!");//Test
         }
     }
  }
