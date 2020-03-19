@@ -10,6 +10,6 @@ namespace Test2077
     {
         static void Main(string[] args)
         {
+            Console.WriteLine("Tse Peremoga!");
         }
-    }
-}
+ }
