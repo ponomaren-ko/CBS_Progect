@@ -6,13 +6,14 @@ using System.Threading.Tasks;
 
 namespace Controller
 {
-    class Authorization
+    public class Authorization
     {
         
 
-        public bool Login(string login, string password) // Тут нужно организовать поиск аккаунта с таким логином и паролем
+        public static Account Login(string login, string password) // Тут нужно организовать поиск аккаунта с таким логином и паролем
         {
-            return false;
+
+            return new Account();
         }
         public void Register()// В разработке
         {

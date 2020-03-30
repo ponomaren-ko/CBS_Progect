@@ -8,9 +8,12 @@ namespace Controller
 {
     public class Account
     {
-        private int UserID;
+        private int userId;
         private string name;
         private string lastName;
+        private string login;
+        private string password;
+        private Ticket[] tickets;//  Не уверен!
        public bool IsAdministartor { get;}
         
     }

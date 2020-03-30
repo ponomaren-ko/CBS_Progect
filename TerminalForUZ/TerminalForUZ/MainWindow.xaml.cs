@@ -12,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using Controller;
 
 namespace TerminalForUZ
 {
@@ -23,6 +24,26 @@ namespace TerminalForUZ
         public MainWindow()
         {
             InitializeComponent();
+        }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            Account account =  Authorization.Login(Login_Textbox.Text, Password_Textbox.Text);
+            if ( account != null) 
+            {
+                if (account.IsAdministartor)
+                {
+                    //Открываем окно АМИНИСТРАТОРА, тут мне нужно разбораться с WPF а то я не шарю как это сделать
+                }
+                else
+                {
+                    // Открываем новое окно для ПОЛЬЗОВАТЕЛЯ передаем экземпляр класса с нашим аккаунтом , тут мне нужно разбораться с WPF а то я не шарю как это сделать
+                }
+            }
+            else
+            {
+                MessageBox.Show("Неправильный логин или пароль!");
+            }
         }
     }
 }
