@@ -12,8 +12,9 @@ namespace Controller
 
         public static Account Login(string login, string password) // Тут нужно организовать поиск аккаунта с таким логином и паролем
         {
-
-            return new Account();
+            Account account = new Account();        
+            
+            return account;
         }
         public void Register()// В разработке
         {
