@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<users>
+  
+  <A0001  Name ="Bogdan" LastName ="Ponomarenko" IsAdministrato ="true" Login ="bogdan" Password ="11110000">
+  </A0001>
+  
+  <A0002 Name ="Vova" LastName ="Musienko" IsAdministrator ="true" Login ="vova" Password ="11110000">   
+  </A0002>
+  
+  <A0003 Name ="Nazar" LastName ="Nifarovski" IsAdministrator ="false" Login ="vasia" Password ="11110000">   
+  </A0003>
+  
+</users>
