@@ -48,7 +48,7 @@
     <Compile Include="Ticket.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="bin\Debug\Accounts_DataBase.xml" />
+    <Folder Include="bin\Debug\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

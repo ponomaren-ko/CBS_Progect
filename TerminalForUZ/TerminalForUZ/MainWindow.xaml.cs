@@ -28,7 +28,7 @@ namespace TerminalForUZ
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            Account account =  Authorization.Login(Login_Textbox.Text, Password_Textbox.Text);
+            Account account =  Authorization.SignIn(Login_Textbox.Text, Password_Textbox.Text);
             if ( account != null) 
             {
                 if (account.IsAdministartor)
