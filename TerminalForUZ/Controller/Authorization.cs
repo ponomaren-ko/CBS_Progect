@@ -1,10 +1,12 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
 using System.Xml;
+using System.Xml.Serialization;
 
 namespace Controller
 {
@@ -12,38 +14,26 @@ namespace Controller
     {
         public static string dataBasePath = @"DB\Accounts_DataBase.xml"; // Путь к БД 
         
-
+       
         public static Account SignIn(string login, string password) // Ищет аккаунт по логину и паролю если есть то возращает аккаунт если нет - null.
         {
-            XmlDocument dataBase = new XmlDocument();
-            dataBase.Load(dataBasePath);
-            XmlElement elements = dataBase.DocumentElement;
-
-            // Поиск по нашими user ам в XML файле
-            foreach (XmlNode user in elements)
+            
+            List<Account> accounts = new List<Account>();
+            XmlSerializer serializer = new XmlSerializer(accounts.GetType());
+            using (FileStream fs = File.OpenRead(dataBasePath))
             {
-                // получаем атрибут Login
-                if (user.Attributes.Count > 0)
-                {
-                    XmlNode userLogin = user.Attributes.GetNamedItem("Login");
-                    XmlNode userPassword = user.Attributes.GetNamedItem("Password");
-
-                    if(userLogin.Value == login && userPassword.Value == password)
-                    {
-                        Account account = new Account();
-                        account.UserID = user.Attributes.GetNamedItem("ID").Value;
-                        account.Name = user.Attributes.GetNamedItem("Name").Value;
-                        account.LastName = user.Attributes.GetNamedItem("LastName").Value;
-                        account.IsAdministartor = Convert.ToBoolean(user.Attributes.GetNamedItem("IsAdministrator").Value);
-                        account.Login = user.Attributes.GetNamedItem("Login").Value;
-                        account.Password = user.Attributes.GetNamedItem("Password").Value;
-                        return account;
-                    }
-                       
-                }
+                accounts = serializer.Deserialize(fs) as List<Account>;
             }
+            var searchAccount = from a in accounts
+                                where a.Login == login && a.Password == password
+                                select a;
 
-                return null;
+            if(searchAccount.Count() > 0)
+            {
+                return searchAccount.First();
+            }
+           
+            return null;
         }
         public void Register()// В разработке
         {

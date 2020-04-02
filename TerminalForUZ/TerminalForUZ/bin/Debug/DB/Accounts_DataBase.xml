@@ -1,13 +1,2 @@
-﻿<?xml version="1.0" encoding="utf-8" ?>
-<users>
-  
-  <user ID ="0"   Name ="Bogdan" LastName ="Ponomarenko" IsAdministrator ="true" Login ="bogdan" Password ="11110000">
-  </user>
-  
-  <user ID ="1" Name ="Vova" LastName ="Musienko" IsAdministrator ="true" Login ="vova" Password ="11110000">   
-  </user>
-  
-  <user ID ="2" Name ="Nazar" LastName ="Nifarovski" IsAdministrator ="false" Login ="vasia" Password ="11110000">   
-  </user>
-  
-</users>
+<?xml version="1.0"?>
+<ArrayOfAccount xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" />

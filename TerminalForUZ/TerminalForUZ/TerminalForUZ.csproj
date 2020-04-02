@@ -100,6 +100,7 @@
       <Name>Controller</Name>
     </ProjectReference>
   </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <Resource Include="bin\Debug\DB\Accounts_DataBase.xml" />
   </ItemGroup>
