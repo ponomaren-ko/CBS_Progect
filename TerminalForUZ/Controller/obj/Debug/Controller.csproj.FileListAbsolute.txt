@@ -1,0 +1,5 @@
+D:\Hobby\Git\Repos\ponomaren-ko\CBS_Progect\TerminalForUZ\Controller\bin\Debug\Controller.dll
+D:\Hobby\Git\Repos\ponomaren-ko\CBS_Progect\TerminalForUZ\Controller\bin\Debug\Controller.pdb
+D:\Hobby\Git\Repos\ponomaren-ko\CBS_Progect\TerminalForUZ\Controller\obj\Debug\Controller.csprojAssemblyReference.cache
+D:\Hobby\Git\Repos\ponomaren-ko\CBS_Progect\TerminalForUZ\Controller\obj\Debug\Controller.dll
+D:\Hobby\Git\Repos\ponomaren-ko\CBS_Progect\TerminalForUZ\Controller\obj\Debug\Controller.pdb
