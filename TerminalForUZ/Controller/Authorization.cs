@@ -7,12 +7,13 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Xml;
 using System.Xml.Serialization;
+using Controller.DataBase;
 
 namespace Controller
 {
     public class Authorization
     {
-        public static string dataBasePath = @"DB\Accounts_DataBase.xml"; // Путь к БД 
+        // DataBaseManager.Path; (@"DataBase\Accounts_DataBase.xml"); Путь к БД 
         
        
         public static Account SignIn(string login, string password) // Ищет аккаунт по логину и паролю если есть то возращает аккаунт если нет - null.
@@ -20,7 +21,7 @@ namespace Controller
             
             List<Account> accounts = new List<Account>();
             XmlSerializer serializer = new XmlSerializer(accounts.GetType());
-            using (FileStream fs = File.OpenRead(dataBasePath))
+            using (FileStream fs = File.OpenRead(DataBaseManager.Path))
             {
                 accounts = serializer.Deserialize(fs) as List<Account>;
             }
