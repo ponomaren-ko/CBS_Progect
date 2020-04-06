@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Controller
 {
-    class Administrator // Хранит методы по управлению контентом!(Добавление рейсов...?)
+    class Administrator : Account // Хранит методы по управлению контентом!(Добавление рейсов...?)
     {
     }
 }

@@ -15,7 +15,7 @@ namespace Controller
     {
         
        
-        public static string SignIn(string login, string password) // Ищет аккаунт по логину и паролю если есть то возращает login аккаунта если нет - null.
+        public static string SignIn(string login, string password) 
         {
             
             List<Account> accounts = new List<Account>();
@@ -28,8 +28,6 @@ namespace Controller
                 accounts = serializer.Deserialize(fs) as List<Account>;
             }
 
-            
-
             try
             {
                 var searchAccount  = accounts.First(x => x.Login == login);
@@ -40,7 +38,6 @@ namespace Controller
                 return "null";
             }
            
-            
         }
         public void Register()// В разработке
         {

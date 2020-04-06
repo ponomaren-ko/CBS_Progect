@@ -16,12 +16,13 @@ namespace Controller
         private string login;
         private string password;
         private Ticket[] tickets;//  Не уверен!
-        public bool IsAdministartor { get; set; }
-        public string Email { get; set; }   
-        public string UserID { get; set; }
+        public bool IsAdministrator { get; set; }
+        public string UserID { get; set; }  
         public string Name { get; set; }
         public string LastName { get; set; }
+        public string Email { get; set; }
 
+        public string PhoneNumber { get; set; }
         public string Login { get; set; }
         [XmlIgnore]
         public string Password { get; set; }
