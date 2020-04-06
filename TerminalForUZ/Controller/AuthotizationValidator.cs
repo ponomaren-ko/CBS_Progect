@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 
 namespace Controller
@@ -9,25 +10,36 @@ namespace Controller
     /// <summary>
     /// Класс хранящий методы проверки валидности полей авторизации
     /// </summary>
-    class AuthotizationValidator
+    static class AuthotizationValidator
     {
-         public bool CheckLogin(string login)
-        {
-            return false;
+     
+        public static bool CheckLogin(string login)
+        { 
+            return Regex.IsMatch(login, "[a-zA-z0-9]+");
         }
-        public bool CheckPassword(string password)
+        /// <summary>
+        /// </summary>
+        /// <param name="password"> Минимальная длинна пароля 6 символов, должен иметь хоть один специальный символ (@,# и т.д.) </param>
+        /// <returns></returns>
+        public static bool CheckPassword(string password)
         {
-            return false;           
+            return Regex.IsMatch(password, @"(?=.*[0-9])(?=.*[!@#$%^&*])(?=.*[a-z])(?=.*[A-Z])[0-9a-zA-Z!@#$%^&*]{6,}");
         }
 
-        public bool CheckEmail(string email)
-        {
-            return false;
+        public static bool CheckEmail(string email)
+        {      
+            return Regex.IsMatch(email, @"^([a-z0-9_-]+\.)*[a-z0-9_-]+@[a-z0-9_-]+(\.[a-z0-9_-]+)*\.[a-z]{2,6}$");
         }
 
-        public bool CheckPhoneNumber()
+        /// <summary>
+        /// </summary>
+        /// <param name="phoneNumber"> Должен соответствовать шаблону "0ХХХХХХХХХ" </param>
+        /// <returns></returns>
+        public static bool CheckPhoneNumber(string phoneNumber)
         {
-            return false;
+            return Regex.IsMatch(phoneNumber, @"^0\d{9}$");
         }
+
+
     }
 }

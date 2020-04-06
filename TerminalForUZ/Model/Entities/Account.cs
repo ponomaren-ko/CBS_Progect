@@ -17,6 +17,7 @@ namespace Controller
         private string password;
         private Ticket[] tickets;//  Не уверен!
         public bool IsAdministartor { get; set; }
+        public string Email { get; set; }   
         public string UserID { get; set; }
         public string Name { get; set; }
         public string LastName { get; set; }

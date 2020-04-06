@@ -12,6 +12,9 @@ namespace Controller
     /// </summary>
     class Owvner
     {
-
+        public Owvner()
+        {
+            AuthotizationValidator.CheckPassword("");
+        }
     }
 }

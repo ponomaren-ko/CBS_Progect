@@ -22,20 +22,25 @@ namespace Controller
             XmlSerializer serializer = new XmlSerializer(accounts.GetType());
             if (!File.Exists(DataBaseManager.Path))
                 DataBaseManager.CreateAccount();
+
             using (FileStream fs = File.OpenRead(DataBaseManager.Path))
             {
                 accounts = serializer.Deserialize(fs) as List<Account>;
             }
-            var searchAccount = from a in accounts
-                                where a.Login == login && a.Password == password
-                                select a;
 
-            if(searchAccount.Count() > 0)
+            
+
+            try
             {
-                return searchAccount.First().Login;
+                var searchAccount  = accounts.First(x => x.Login == login);
+                return searchAccount.Login;
+            }
+            catch (Exception)
+            {
+                return "null";
             }
            
-            return null;
+            
         }
         public void Register()// В разработке
         {
