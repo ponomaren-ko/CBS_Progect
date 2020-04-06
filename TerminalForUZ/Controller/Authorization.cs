@@ -13,14 +13,15 @@ namespace Controller
 {
     public class Authorization
     {
-        // DataBaseManager.Path; (@"DataBase\Accounts_DataBase.xml"); Путь к БД 
         
        
-        public static Account SignIn(string login, string password) // Ищет аккаунт по логину и паролю если есть то возращает аккаунт если нет - null.
+        public static string SignIn(string login, string password) // Ищет аккаунт по логину и паролю если есть то возращает login аккаунта если нет - null.
         {
             
             List<Account> accounts = new List<Account>();
             XmlSerializer serializer = new XmlSerializer(accounts.GetType());
+            if (!File.Exists(DataBaseManager.Path))
+                DataBaseManager.CreateAccount();
             using (FileStream fs = File.OpenRead(DataBaseManager.Path))
             {
                 accounts = serializer.Deserialize(fs) as List<Account>;
@@ -31,7 +32,7 @@ namespace Controller
 
             if(searchAccount.Count() > 0)
             {
-                return searchAccount.First();
+                return searchAccount.First().Login;
             }
            
             return null;

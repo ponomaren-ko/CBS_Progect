@@ -102,9 +102,6 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="bin\Debug\DataBase\Accounts_DataBase.xml" />
-  </ItemGroup>
-  <ItemGroup>
     <Content Include="bin\Debug\UI.exe" />
   </ItemGroup>
   <ItemGroup>
