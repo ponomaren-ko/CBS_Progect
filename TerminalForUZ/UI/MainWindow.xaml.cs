@@ -26,21 +26,10 @@ namespace UI
         public MainWindow()
         {
             InitializeComponent();
+            frame.Navigate(new AuthorizationPage());
         }
 
-        private void SignIn_Button_Click(object sender, RoutedEventArgs e)
-        {
-            Account account = Authorization.SignIn(Login_TextBox.Text, Password_TextBox.Text);
-
-            if (account == null)
-            {
-                MessageBox.Show("Неправильный логин или пароль! ");  
-            }
-            else
-            {
-
-            }
-        }
+        
 
     }
 }

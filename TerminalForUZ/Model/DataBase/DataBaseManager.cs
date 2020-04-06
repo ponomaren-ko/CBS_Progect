@@ -9,6 +9,7 @@ namespace Controller.DataBase
 {
     public class DataBaseManager
     {
+      
         public static string Path { get { return @"DataBase\Accounts_DataBase.xml"; } }
         public static bool Create() 
         {

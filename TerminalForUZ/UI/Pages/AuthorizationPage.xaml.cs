@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Controller;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -18,16 +19,16 @@ namespace UI
     /// <summary>
     /// Логика взаимодействия для Page1.xaml
     /// </summary>
-    public partial class Page1 : Page
+    public partial class AuthorizationPage : Page
     {
-        public Page1()
+        public AuthorizationPage()
         {
             InitializeComponent();
         }
 
-        private void BackButton_Click(object sender, RoutedEventArgs e)
+        private void SignIn_Button_Click(object sender, RoutedEventArgs e)
         {
-
+            
         }
     }
 }

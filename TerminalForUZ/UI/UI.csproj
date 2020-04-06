@@ -67,14 +67,14 @@
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Page Include="Page1.xaml">
+    <Page Include="Pages\AuthorizationPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Page1.xaml.cs">
-      <DependentUpon>Page1.xaml</DependentUpon>
+    <Compile Include="Pages\AuthorizationPage.xaml.cs">
+      <DependentUpon>AuthorizationPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs">
       <SubType>Code</SubType>
@@ -102,13 +102,16 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <Resource Include="bin\Debug\DataBase\Accounts_DataBase.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="bin\Debug\UI.exe" />
+  </ItemGroup>
+  <ItemGroup>
     <ProjectReference Include="..\Controller\Controller.csproj">
       <Project>{1fc87904-3d56-440d-88c4-89bb2613b0b3}</Project>
       <Name>Controller</Name>
     </ProjectReference>
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="bin\Debug\DataBase\Accounts_DataBase.xml" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

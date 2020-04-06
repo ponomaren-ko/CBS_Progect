@@ -3,3 +3,6 @@ D:\Hobby\Git\Repos\ponomaren-ko\CBS_Progect\TerminalForUZ\Controller\bin\Debug\C
 D:\Hobby\Git\Repos\ponomaren-ko\CBS_Progect\TerminalForUZ\Controller\obj\Debug\Controller.csprojAssemblyReference.cache
 D:\Hobby\Git\Repos\ponomaren-ko\CBS_Progect\TerminalForUZ\Controller\obj\Debug\Controller.dll
 D:\Hobby\Git\Repos\ponomaren-ko\CBS_Progect\TerminalForUZ\Controller\obj\Debug\Controller.pdb
+D:\Hobby\Git\Repos\ponomaren-ko\CBS_Progect\TerminalForUZ\Controller\bin\Debug\Model.dll
+D:\Hobby\Git\Repos\ponomaren-ko\CBS_Progect\TerminalForUZ\Controller\bin\Debug\Model.pdb
+D:\Hobby\Git\Repos\ponomaren-ko\CBS_Progect\TerminalForUZ\Controller\obj\Debug\Controller.csproj.CopyComplete

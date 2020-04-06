@@ -5,12 +5,8 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:UI"
         mc:Ignorable="d"
-        Title="MainWindow" Height="500" Width="400">
+        Title="MainWindow" Height="500" Width="800">
     <Grid>
-        
-        <TextBox Name ="Login_TextBox" HorizontalAlignment="Left" Height="23" Margin="131,121,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120"/>
-        <TextBox Name ="Password_TextBox"  HorizontalAlignment="Left" Height="23" Margin="131,194,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120"/>
-        <Button Name="SignIn_Button" Content="Sign in" HorizontalAlignment="Left" Margin="155,284,0,0" VerticalAlignment="Top" Width="75" Click="SignIn_Button_Click"/>
-
+        <Frame x:Name="frame" NavigationUIVisibility="Hidden" Margin="0,0,-0.4,0.4" Background="#FF2969A9"/>
     </Grid>
 </Window>
