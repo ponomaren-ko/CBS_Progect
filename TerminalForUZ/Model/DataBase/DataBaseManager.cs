@@ -12,7 +12,7 @@ namespace Controller.DataBase
     public class DataBaseManager
     {
       
-        private static string Path { get { return Directory.GetParent(Directory.GetCurrentDirectory()).Parent.Parent.FullName + "\\Model\\DataBase\\Accounts_DataBase.xml"; ; } }
+        public static string Path { get { return Directory.GetParent(Directory.GetCurrentDirectory()).Parent.Parent.FullName + "\\Model\\DataBase\\Accounts_DataBase.xml"; ; } }
        /// <summary>
        /// Создаёт новую  базу данных аккаунтов
        /// </summary>

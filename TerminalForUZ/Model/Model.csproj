@@ -41,7 +41,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Class1.cs" />
     <Compile Include="DataBase\DataBaseManager.cs" />
     <Compile Include="Entities\Account.cs" />
     <Compile Include="Entities\Administrator.cs" />

@@ -17,7 +17,7 @@ namespace Controller
         }
         public bool CheckPassword(string password)
         {
-            return false;
+            return false;           
         }
 
         public bool CheckEmail(string email)
