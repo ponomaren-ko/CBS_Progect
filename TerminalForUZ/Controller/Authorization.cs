@@ -5,6 +5,7 @@ using System.Linq;
 using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows;
 using System.Xml;
 using System.Xml.Serialization;
 using Controller.DataBase;
@@ -14,7 +15,7 @@ namespace Controller
     public class Authorization
     {
         
-       
+       //TODO: Доделать проверку по паролю
         public static bool SignIn(string login, string password) 
         {
             
@@ -39,9 +40,6 @@ namespace Controller
             }
            
         }
-        public void Register()// В разработке
-        {
-
-        }
+       
     }
 }
