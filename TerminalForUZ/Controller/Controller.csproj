@@ -41,6 +41,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Administrator.cs" />
     <Compile Include="Authorization.cs" />
     <Compile Include="Owvner.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
