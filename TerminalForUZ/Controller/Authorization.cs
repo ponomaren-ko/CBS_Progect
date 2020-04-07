@@ -15,7 +15,7 @@ namespace Controller
     {
         
        
-        public static string SignIn(string login, string password) 
+        public static bool SignIn(string login, string password) 
         {
             
             List<Account> accounts = new List<Account>();
@@ -31,11 +31,11 @@ namespace Controller
             try
             {
                 var searchAccount  = accounts.First(x => x.Login == login);
-                return searchAccount.Login;
+                return true;
             }
             catch (Exception)
             {
-                return "null";
+                return false;
             }
            
         }
