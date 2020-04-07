@@ -6,3 +6,11 @@ D:\Hobby\Git\Repos\ponomaren-ko\CBS_Progect\TerminalForUZ\Controller\obj\Debug\C
 D:\Hobby\Git\Repos\ponomaren-ko\CBS_Progect\TerminalForUZ\Controller\bin\Debug\Model.dll
 D:\Hobby\Git\Repos\ponomaren-ko\CBS_Progect\TerminalForUZ\Controller\bin\Debug\Model.pdb
 D:\Hobby\Git\Repos\ponomaren-ko\CBS_Progect\TerminalForUZ\Controller\obj\Debug\Controller.csproj.CopyComplete
+C:\Users\Vova Musienko\Desktop\UI\CBS_Progect-master\TerminalForUZ\Controller\bin\Debug\Controller.dll
+C:\Users\Vova Musienko\Desktop\UI\CBS_Progect-master\TerminalForUZ\Controller\bin\Debug\Controller.pdb
+C:\Users\Vova Musienko\Desktop\UI\CBS_Progect-master\TerminalForUZ\Controller\bin\Debug\Model.dll
+C:\Users\Vova Musienko\Desktop\UI\CBS_Progect-master\TerminalForUZ\Controller\bin\Debug\Model.pdb
+C:\Users\Vova Musienko\Desktop\UI\CBS_Progect-master\TerminalForUZ\Controller\obj\Debug\Controller.csprojAssemblyReference.cache
+C:\Users\Vova Musienko\Desktop\UI\CBS_Progect-master\TerminalForUZ\Controller\obj\Debug\Controller.csproj.CopyComplete
+C:\Users\Vova Musienko\Desktop\UI\CBS_Progect-master\TerminalForUZ\Controller\obj\Debug\Controller.dll
+C:\Users\Vova Musienko\Desktop\UI\CBS_Progect-master\TerminalForUZ\Controller\obj\Debug\Controller.pdb
