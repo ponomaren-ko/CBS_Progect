@@ -26,10 +26,13 @@ namespace UI
         public MainWindow()
         {
             InitializeComponent();
-            frame.Navigate(new AuthorizationPage());
+            
         }
 
-        
+        private void SignInButton_Click(object sender, RoutedEventArgs e)
+        {
+            Authorization.SignIn(LoginTextBox.Text, PasswordBox.Password);
 
+        }
     }
 }
