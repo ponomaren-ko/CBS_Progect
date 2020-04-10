@@ -9,4 +9,13 @@
     <Login>ivanivanov</Login>
     <Password>Test123@</Password>
   </Account>
+  <Account>
+    <IsAdministrator>false</IsAdministrator>
+    <Name>Богдан</Name>
+    <LastName>Пономаренко</LastName>
+    <Email>cbsproject@gmail.com</Email>
+    <PhoneNumber>0985423651</PhoneNumber>
+    <Login>bogdanponomarenko</Login>
+    <Password>Test321@</Password>
+  </Account>
 </ArrayOfAccount>

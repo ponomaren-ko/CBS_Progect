@@ -28,12 +28,12 @@ namespace UI
 
         private void RegisterButton_Click(object sender, RoutedEventArgs e)
         {
-            string name = "Иван";
-            string lastname = "Иванов";
-            string login = "ivanivanov";
-            string password = "Test123@";
-            string email = "qwerty@gmail.com";
-            string phone = "0965423431";
+            string name = NameTextBox.Text;
+            string lastname = LastNameTextBox.Text;
+            string login = LoginTextBox.Text;
+            string password = PasswordBox.Password;
+            string email = EmailTextBox.Text;
+            string phone = PhoneNumberTextBox.Text;
 
             Registrator.Register(name, lastname, login, password, phone, email);
         }

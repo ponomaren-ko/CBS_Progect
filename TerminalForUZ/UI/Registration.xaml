@@ -11,13 +11,17 @@
         Background="Transparent">
 
     <Grid>
-        <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <Grid Margin="0,0,0,-0.4" Grid.RowSpan="2">
             <Grid.RowDefinitions>
-                <RowDefinition/>
-                <RowDefinition/>
+                <RowDefinition Height="98*"/>
+                <RowDefinition Height="127*"/>
             </Grid.RowDefinitions>
 
-            <Border CornerRadius="10" Grid.RowSpan="2">
+            <Border CornerRadius="10" Grid.RowSpan="2" Margin="0,2,0,-2.4">
                 <Border.Background>
                     <LinearGradientBrush>
                         <GradientStop Color="#7be9f6" Offset="0.0"/>
@@ -30,10 +34,10 @@
             </Border>
 
             <StackPanel
-                Orientation="Horizontal">
+                Orientation="Horizontal" Margin="0,0,0,224.6" Grid.RowSpan="2">
                 <TextBox x:Name="NameTextBox" FontFamily="Helvetica"
                          FontWeight="Light"
-                         Text="Name"
+                         Text="Имя"
                          FontSize="22"
                          HorizontalAlignment="Center"
                          Foreground="White"
@@ -49,16 +53,16 @@
                                  HorizontalAlignment="Center"
                                  Foreground="White" Margin="0,10,0,104.8" RenderTransformOrigin="0.45,-1.725"/>
             </StackPanel>
-            <Border Width="250"
+            <Border
                     Height="2"
                     Background="White"
-                    Opacity="0.5" Margin="65,78,65,144.8"/>
+                    Opacity="0.5" Margin="65,77,65,117"/>
 
 
-            <StackPanel Orientation="Horizontal" Margin="0,2,0,0">
-                <TextBox Name="LastNameTextBox" FontFamily="Helvetica"
+            <StackPanel Orientation="Horizontal" Margin="0,2,0,224.6" Grid.RowSpan="2">
+                <TextBox x:Name="LastNameTextBox" FontFamily="Helvetica"
                          FontWeight="Light"
-                         Text="Last name"
+                         Text="Фамилия"
                          FontSize="22"
                          HorizontalAlignment="Center"
                          Foreground="White"
@@ -68,21 +72,21 @@
                          HorizontalContentAlignment="Left"
                          Opacity="0.5"
                          Height="25"
-                         Margin="64,0,0,0"/>
+                         Margin="64,99,0,99.2"/>
                 <iconPacks:PackIconMaterial Kind="Account"
                                  VerticalAlignment="Center"
                                  HorizontalAlignment="Center"
                                  Foreground="White"/>
             </StackPanel>
-            <Border Width="250"
+            <Border
                     Height="2"
                     Background="White"
-                    Opacity="0.5" Margin="65,125,65,97.8"/>
+                    Opacity="0.5" Margin="65,125,65,69"/>
 
-            <StackPanel Orientation="Horizontal" Margin="0,100,0,0">
+            <StackPanel Orientation="Horizontal" Margin="0,100,0,224.6" Grid.RowSpan="2">
                 <TextBox Name="PhoneNumberTextBox" FontFamily="Helvetica"
                          FontWeight="Light"
-                         Text="Phone"
+                         Text="Номер телефона"
                          FontSize="22"
                          HorizontalAlignment="Center"
                          Foreground="White"
@@ -98,13 +102,13 @@
                                  HorizontalAlignment="Center"
                                  Foreground="White"/>
             </StackPanel>
-            <Border Width="250"
+            <Border
                     Height="2"
                     Background="White"
-                    Opacity="0.5" Margin="65,175,65,47.8"/>
+                    Opacity="0.5" Margin="65,173,65,21"/>
 
 
-            <StackPanel Grid.Row="1">
+            <StackPanel Grid.Row="1" Margin="0,1,0,-0.4">
                 <StackPanel Orientation="Horizontal">
                     <TextBox x:Name="EmailTextBox" FontFamily="Helvetica"
                          FontWeight="Light"
@@ -134,7 +138,7 @@
                 <StackPanel Orientation="Horizontal" Margin="0,20,0,0">
                     <TextBox Name="LoginTextBox" FontFamily="Helvetica"
                          FontWeight="Light"
-                         Text="Login"
+                         Text="Логин"
                          FontSize="22"
                          HorizontalAlignment="Center"
                          Foreground="White"
@@ -156,7 +160,7 @@
                     Opacity="0.5"/>
 
                 <StackPanel Orientation="Horizontal" Margin="0,20,0,0">
-                    <PasswordBox Name="TextBox" FontFamily="Helvetica"
+                    <PasswordBox Name="PasswordBox" FontFamily="Helvetica"
                          FontWeight="Light"
                          Password="Password"
                          FontSize="22"
@@ -182,7 +186,7 @@
 
 
 
-                <StackPanel Orientation="Horizontal" Margin="110,30,110,0">
+                <StackPanel Orientation="Horizontal" Margin="110,75,110,0">
                     <Button x:Name="RegisterButton" Width="160" Height="35" Content="ЗАРЕГИСТРИРОВАТЬСЯ" Click="RegisterButton_Click" />
                 </StackPanel>
 
