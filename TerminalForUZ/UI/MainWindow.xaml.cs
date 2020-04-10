@@ -33,7 +33,15 @@ namespace UI
 
         private void SignInButton_Click(object sender, RoutedEventArgs e)
         {
-            Authorization.SignIn(LoginTextBox.Text, PasswordBox.Password);
+            if (Authorization.SignIn(LoginTextBox.Text, PasswordBox.Password) == true)
+            {
+                MessageBox.Show("Вы успешно вошли");
+            }
+            else
+            {
+                MessageBox.Show("Данные введены неправильно");
+            }
+            
 
         }
 

@@ -32,6 +32,8 @@ namespace Controller
             try
             {
                 var searchAccount  = accounts.First(x => x.Login == login);
+                var searchPassword = accounts.First(p => p.Password == password); //не уверен что тут должен быть First
+                MessageBox.Show("Login successfull");
                 return true;
             }
             catch (Exception)
