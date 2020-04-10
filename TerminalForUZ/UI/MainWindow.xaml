@@ -54,7 +54,7 @@
                          Opacity="0.5"
                          Height="25"
                          Margin="64,0,0,0"/>
-                    <iconPacks:PackIconMaterial Kind="Account"
+                    <iconPacks:PackIconMaterial Kind="LoginVariant"
                                  VerticalAlignment="Center"
                                  HorizontalAlignment="Center"
                                  Foreground="White"/>
@@ -95,14 +95,18 @@
 
                 <StackPanel Orientation="Horizontal" Margin="0,50,0,0">
                     <Button x:Name="SignInButton" Width="100" Height="35" Content="ВОЙТИ" Margin="65,0,10,0" Click="SignInButton_Click" />
-                    <Button x:Name="RegisterButton" Width="150" Height="35" Content="ЗАРЕГИСТРИРОВАТЬСЯ" Click="RegisterButton_Click" />
+                    <Button x:Name="RegisterButton" Width="150" Height="35" Content="ЗАРЕГИСТРИРОВАТЬСЯ" Click="RegisterButton_Click" Command="{Binding RegisterButton_Click}" />
                 </StackPanel>
-                
+
             </StackPanel>
 
-            
+
 
         </Grid>
+
+        <Frame x:Name="Frame"/>
+            
         
+
     </Grid>
 </Window>

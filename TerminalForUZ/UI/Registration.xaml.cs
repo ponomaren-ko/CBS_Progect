@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Controller;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -23,6 +24,18 @@ namespace UI
         public Registration()
         {
             InitializeComponent();
+        }
+
+        private void RegisterButton_Click(object sender, RoutedEventArgs e)
+        {
+            string name = "Иван";
+            string lastname = "Иванов";
+            string login = "ivanivanov";
+            string password = "Test123@";
+            string email = "qwerty@gmail.com";
+            string phone = "0965423431";
+
+            Registrator.Register(name, lastname, login, password, phone, email);
         }
     }
 }

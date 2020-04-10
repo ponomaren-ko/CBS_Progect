@@ -23,8 +23,10 @@ namespace UI
     /// </summary>
     public partial class MainWindow : Window
     {
+               
         public MainWindow()
         {
+            
             InitializeComponent();
             
         }
@@ -37,14 +39,9 @@ namespace UI
 
         private void RegisterButton_Click(object sender, RoutedEventArgs e)
         {
-            string name = "Иван";
-            string lastname = "Иванов";
-            string login = "ivanivanov";
-            string password = "Test123@";
-            string email = "qwerty@gmail.com";
-            string phone = "0965423431";
-
-            Registrator.Register(name, lastname, login, password, phone, email);
+            Frame.Navigate(new Registration());
         }
+
+        
     }
 }
