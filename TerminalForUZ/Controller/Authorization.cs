@@ -16,31 +16,25 @@ namespace Controller
     {
         
        //TODO: Доделать проверку по паролю
-        public static bool SignIn(string login, string password) 
+        public static string[] SignIn(string login, string password) 
         {
+            Account account = DataBaseManager.OpenAccount(login, password);
+            if (account != null)
+            {
+                string[] accountInfo = new string[7];
+                accountInfo[0] = account.IsAdministrator.ToString();
+                accountInfo[1] = account.Name;
+                accountInfo[2] = account.LastName;
+                accountInfo[3] = account.Email;
+                accountInfo[4] = account.PhoneNumber;
+                accountInfo[5] = account.Login;
+                accountInfo[6] = account.Password;
+                return accountInfo;
+            }
+            else
+                return null;
             
-            List<Account> accounts = new List<Account>();
-            XmlSerializer serializer = new XmlSerializer(accounts.GetType());
-            if (!File.Exists(DataBaseManager.Path))
-                DataBaseManager.CreateAccount();
-
-            using (FileStream fs = File.OpenRead(DataBaseManager.Path))
-            {
-                accounts = serializer.Deserialize(fs) as List<Account>;
-            }
-
-            try
-            {
-                var searchAccount  = accounts.First(x => x.Login == login);
-                var searchPassword = accounts.First(p => p.Password == password); //не уверен что тут должен быть First
-                MessageBox.Show("Login successfull");
-                return true;
-            }
-            catch (Exception)
-            {
-                return false;
-            }
-           
+            
         }
        
     }
