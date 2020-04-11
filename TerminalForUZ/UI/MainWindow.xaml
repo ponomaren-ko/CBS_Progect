@@ -105,6 +105,7 @@
         </Grid>
 
         <Frame x:Name="Frame"/>
+        <Frame x:Name="MainUserManuFrame"/>
             
         
 

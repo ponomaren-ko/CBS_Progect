@@ -18,4 +18,13 @@
     <Login>bogdanponomarenko</Login>
     <Password>Test321@</Password>
   </Account>
+  <Account>
+    <IsAdministrator>true</IsAdministrator>
+    <Name>Johny</Name>
+    <LastName>Ponomarenko</LastName>
+    <Email>ponomaren2121ko@gmail.com</Email>
+    <PhoneNumber>0632212128</PhoneNumber>
+    <Login>Bogdan378</Login>
+    <Password>Password@123</Password>
+  </Account>
 </ArrayOfAccount>

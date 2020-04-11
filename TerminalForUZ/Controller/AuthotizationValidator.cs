@@ -10,10 +10,10 @@ namespace Controller
     /// <summary>
     /// Класс хранящий методы проверки валидности полей авторизации
     /// </summary>
-    static class AuthotizationValidator
+    public static class AuthotizationValidator
     {
      
-        private static bool CheckLogin(string login)
+        public static bool CheckLogin(string login)
         { 
             return Regex.IsMatch(login, "[a-zA-z0-9]+");
         }
@@ -21,12 +21,12 @@ namespace Controller
         /// </summary>
         /// <param name="password"> Минимальная длинна пароля 6 символов, должен иметь хоть один специальный символ (@,# и т.д.) </param>
         /// <returns></returns>
-        private static bool CheckPassword(string password)
+        public static bool CheckPassword(string password)
         {
             return Regex.IsMatch(password, @"(?=.*[0-9])(?=.*[!@#$%^&*])(?=.*[a-z])(?=.*[A-Z])[0-9a-zA-Z!@#$%^&*]{6,}");
         }
 
-        private static bool CheckEmail(string email)
+        public static bool CheckEmail(string email)
         {      
             return Regex.IsMatch(email, @"^([a-z0-9_-]+\.)*[a-z0-9_-]+@[a-z0-9_-]+(\.[a-z0-9_-]+)*\.[a-z]{2,6}$");
         }
@@ -35,7 +35,7 @@ namespace Controller
         /// </summary>
         /// <param name="phoneNumber"> Должен соответствовать шаблону "0ХХХХХХХХХ" </param>
         /// <returns></returns>
-        private static bool CheckPhoneNumber(string phoneNumber)
+        public static bool CheckPhoneNumber(string phoneNumber)
         {
             return Regex.IsMatch(phoneNumber, @"^0\d{9}$");
         }

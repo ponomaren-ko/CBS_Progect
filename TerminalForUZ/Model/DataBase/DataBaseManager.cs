@@ -52,11 +52,39 @@ namespace Controller.DataBase
                 return null;
             }
                 
+        }
+
+        public static bool ChangeAccountInfo(Account account)
+        {
+           
+                List<Account> accounts = new List<Account>();
+                XmlSerializer serializer = new XmlSerializer(accounts.GetType());
+                using (FileStream fs = File.OpenRead(DataBaseManager.Path))
+                {
+                    accounts = serializer.Deserialize(fs) as List<Account>;
+                }
+                Account acc;
+                try
+                {
+                
+                acc = accounts.First(x => x.Login == account.Login && x.Password == account.Password);
+                accounts[accounts.IndexOf(acc)] = account;
+
+                }
+                catch (Exception)
+                {
+                    return false;
+                }
+                
+
+                using (FileStream file = File.Create(Path))
+                {
+                    serializer.Serialize(file, accounts);
+                }
 
             
-                
-               
-           
+
+            return true;
         }
 
     }

@@ -37,7 +37,10 @@ namespace UI
             if (accountInfo != null)
             {
                 MessageBox.Show("Welcome, " + accountInfo[1] );
-                
+
+                this.Hide();
+                new MainUserManu2(accountInfo).Show();
+             
             }
            
             else
@@ -45,7 +48,6 @@ namespace UI
                 MessageBox.Show("Неправильный логин или пароль");
             }
             
-
         }
 
         private void RegisterButton_Click(object sender, RoutedEventArgs e)

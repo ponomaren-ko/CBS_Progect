@@ -52,5 +52,8 @@
   <ItemGroup>
     <Content Include="DataBase\Accounts_DataBase.xml" />
   </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Validators\" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

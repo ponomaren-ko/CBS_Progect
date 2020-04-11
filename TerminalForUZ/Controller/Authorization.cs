@@ -14,9 +14,9 @@ namespace Controller
 {
     public class Authorization
     {
-        
-       //TODO: Доделать проверку по паролю
-        public static string[] SignIn(string login, string password) 
+
+        //TODO: Доделать проверку по паролю
+        public static string[] SignIn(string login, string password)
         {
             Account account = DataBaseManager.OpenAccount(login, password);
             if (account != null)
@@ -33,9 +33,48 @@ namespace Controller
             }
             else
                 return null;
-            
-            
+
+
         }
-       
+
+        public static bool ChnageAccountInfo(string[] accountInfo)
+        {
+            Account account = new Account();
+
+            account.IsAdministrator = Convert.ToBoolean(accountInfo[0]);
+            account.Name = accountInfo[1];
+            account.LastName = accountInfo[2];
+
+            if (AuthotizationValidator.CheckEmail(accountInfo[3]))
+                account.Email = accountInfo[3];
+            else
+            {
+                MessageBox.Show("Invalid Email");
+                return false;
+            }
+
+            if (AuthotizationValidator.CheckPhoneNumber(accountInfo[4]))
+                account.PhoneNumber = accountInfo[4];
+
+            else
+            {
+                MessageBox.Show("Invalid phone number ");
+                return false;
+            }
+            
+            account.Login =  accountInfo[5]; ;
+
+            if (AuthotizationValidator.CheckPassword(accountInfo[6]))
+                account.Password= accountInfo[6];
+            else
+            {
+                MessageBox.Show("Invalid password ");
+                return false;
+            }
+
+            return DataBaseManager.ChangeAccountInfo(account);
+            
+
+        }
     }
 }
