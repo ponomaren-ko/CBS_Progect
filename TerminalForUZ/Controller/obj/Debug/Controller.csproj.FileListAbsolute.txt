@@ -22,3 +22,11 @@ C:\Users\Vova Musienko\source\repos\ponomaren-ko\CBS_Progect\TerminalForUZ\Contr
 C:\Users\Vova Musienko\source\repos\ponomaren-ko\CBS_Progect\TerminalForUZ\Controller\bin\Debug\Model.dll
 C:\Users\Vova Musienko\source\repos\ponomaren-ko\CBS_Progect\TerminalForUZ\Controller\bin\Debug\Model.pdb
 C:\Users\Vova Musienko\source\repos\ponomaren-ko\CBS_Progect\TerminalForUZ\Controller\obj\Debug\Controller.csproj.CopyComplete
+D:\Hobby\Git\Repos\CBS_Progect\TerminalForUZ\Controller\bin\Debug\Controller.dll
+D:\Hobby\Git\Repos\CBS_Progect\TerminalForUZ\Controller\bin\Debug\Controller.pdb
+D:\Hobby\Git\Repos\CBS_Progect\TerminalForUZ\Controller\bin\Debug\Model.dll
+D:\Hobby\Git\Repos\CBS_Progect\TerminalForUZ\Controller\bin\Debug\Model.pdb
+D:\Hobby\Git\Repos\CBS_Progect\TerminalForUZ\Controller\obj\Debug\Controller.csprojAssemblyReference.cache
+D:\Hobby\Git\Repos\CBS_Progect\TerminalForUZ\Controller\obj\Debug\Controller.csproj.CopyComplete
+D:\Hobby\Git\Repos\CBS_Progect\TerminalForUZ\Controller\obj\Debug\Controller.dll
+D:\Hobby\Git\Repos\CBS_Progect\TerminalForUZ\Controller\obj\Debug\Controller.pdb
