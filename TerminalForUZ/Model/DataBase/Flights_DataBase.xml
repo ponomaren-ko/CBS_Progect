@@ -1,0 +1,39 @@
+<?xml version="1.0"?>
+<ArrayOfFlight xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Flight>
+    <Id>1</Id>
+    <DeparturePoint>Киев</DeparturePoint>
+    <DestinationPoint>Львов</DestinationPoint>
+    <DepartureDate>01/01/21</DepartureDate>
+    <DepartureTime>10:15</DepartureTime>
+    <Plane>Airobus 350</Plane>
+    <Staus>Check-in</Staus>
+  </Flight>
+  <Flight>
+    <Id>1</Id>
+    <DeparturePoint>Киев</DeparturePoint>
+    <DestinationPoint>Львов</DestinationPoint>
+    <DepartureDate>01/15/21</DepartureDate>
+    <DepartureTime>7:15</DepartureTime>
+    <Plane>Airobus 366</Plane>
+    <Staus>Check-in</Staus>
+  </Flight>
+  <Flight>
+    <Id>2</Id>
+    <DeparturePoint>Киев</DeparturePoint>
+    <DestinationPoint>Токио</DestinationPoint>
+    <DepartureDate>01/02/21</DepartureDate>
+    <DepartureTime>18:15</DepartureTime>
+    <Plane>Airobus 350</Plane>
+    <Staus>Check-in</Staus>
+  </Flight>
+  <Flight>
+    <Id>3</Id>
+    <DeparturePoint>Варшава</DeparturePoint>
+    <DestinationPoint>Киев</DestinationPoint>
+    <DepartureDate>15/01/21</DepartureDate>
+    <DepartureTime>7:00</DepartureTime>
+    <Plane>Airobus 350</Plane>
+    <Staus>Check-in</Staus>
+  </Flight>
+</ArrayOfFlight>

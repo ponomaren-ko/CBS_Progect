@@ -18,8 +18,9 @@ namespace UI
     /// <summary>
     /// Логика взаимодействия для MainUserManu2.xaml
     /// </summary>
-    public partial class MainUserManu2 : Window
+    public partial class UserPersonalData : Window
     {
+        private string[] userInfo;
         public string IsAdministrator { get; }
         public string UserName { get; set; }
         public string LastName { get; set; }
@@ -29,10 +30,10 @@ namespace UI
         public string Password { get; set; }
 
 
-        public MainUserManu2(string[] userInfo)
+        public UserPersonalData(string[] userInfo)
         {
+            this.userInfo = userInfo;
             InitializeComponent();
-
             IsAdministrator = userInfo[0];
             UserName = userInfo[1];
             NameTextBox.Text = UserName;
@@ -43,13 +44,11 @@ namespace UI
             PhoneNumber = userInfo[4];
             PhoneNumberTextBox.Text = PhoneNumber;
             Login = userInfo[5];
+            LoginTextBox.Text = Login;
             Password = userInfo[6];
         }
 
-        private void NextPage_Click(object sender, RoutedEventArgs e)
-        {
-
-        }
+        
 
         private void SaveButton_Click(object sender, RoutedEventArgs e)
         {
@@ -63,6 +62,13 @@ namespace UI
             string[] accountInfo = { IsAdministrator, UserName, LastName, Email, PhoneNumber, Login, Password };
             if (Authorization.ChnageAccountInfo(accountInfo))
                 MessageBox.Show(" Successful! ");
+        }
+
+        private void Cancel_Click(object sender, RoutedEventArgs e)
+        {
+            
+            new MainUserMenu(userInfo).Show();
+            this.Close();
         }
     }
 }

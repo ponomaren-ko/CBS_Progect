@@ -43,17 +43,23 @@
   <ItemGroup>
     <Compile Include="DataBase\DataBase.cs" />
     <Compile Include="DataBase\DataBaseManager.cs" />
+    <Compile Include="DataBase\DataBaseManagerAccounts.cs" />
+    <Compile Include="DataBase\DataBaseManagerFlight.cs" />
+    <Compile Include="DataBase\DataBaseManagerPlane.cs" />
     <Compile Include="DataBase\IDataBase.cs" />
     <Compile Include="Entities\Account.cs" />
     <Compile Include="Entities\Administrator.cs" />
+    <Compile Include="Entities\Flight.cs" />
+    <Compile Include="Entities\Plane.cs" />
     <Compile Include="Entities\Ticket.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="DataBase\Accounts_DataBase.xml" />
+    <Content Include="DataBase\Cities_DataBase.xml" />
+    <Content Include="DataBase\Flights_DataBase.xml" />
+    <Content Include="DataBase\Planes_DataBase.xml" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Validators\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

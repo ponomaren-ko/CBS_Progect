@@ -61,8 +61,14 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
-    <Compile Include="MainUserManu2.xaml.cs">
-      <DependentUpon>MainUserManu2.xaml</DependentUpon>
+    <Compile Include="FlightCatalog.xaml.cs">
+      <DependentUpon>FlightCatalog.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="MainUserMenu.xaml.cs">
+      <DependentUpon>MainUserMenu.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UserPersonalData.xaml.cs">
+      <DependentUpon>UserPersonalData.xaml</DependentUpon>
     </Compile>
     <Compile Include="Registration.xaml.cs">
       <DependentUpon>Registration.xaml</DependentUpon>
@@ -71,7 +77,15 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="MainUserManu2.xaml">
+    <Page Include="FlightCatalog.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="MainUserMenu.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UserPersonalData.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

@@ -18,7 +18,7 @@ namespace Controller
         //TODO: Доделать проверку по паролю
         public static string[] SignIn(string login, string password)
         {
-            Account account = DataBaseManager.OpenAccount(login, password);
+            Account account = DataBaseManagerAccounts.Find(login, password);
             if (account != null)
             {
                 string[] accountInfo = new string[7];
@@ -72,7 +72,7 @@ namespace Controller
                 return false;
             }
 
-            return DataBaseManager.ChangeAccountInfo(account);
+            return DataBaseManagerAccounts.ChangeInfo(account);
             
 
         }

@@ -37,9 +37,9 @@ namespace UI
             if (accountInfo != null)
             {
                 MessageBox.Show("Welcome, " + accountInfo[1] );
-
-                this.Hide();
-                new MainUserManu2(accountInfo).Show();
+                new MainUserMenu(accountInfo).Show();
+                this.Close();
+                
              
             }
            
@@ -52,9 +52,13 @@ namespace UI
 
         private void RegisterButton_Click(object sender, RoutedEventArgs e)
         {
-            Frame.Navigate(new Registration());
+           Frame.Navigate(new Registration());
+          
         }
 
-        
+        private void MainUserManuFrame_Navigated(object sender, NavigationEventArgs e)
+        {
+
+        }
     }
 }
