@@ -22,6 +22,7 @@ namespace UI
     {
         private string[] userInfo;
         List<string> avalibleFlights;
+        string[,] result;
         public FlightCatalog(string[] userInfo)
         {
             this.userInfo = userInfo;
@@ -67,7 +68,15 @@ namespace UI
 
         private void BuyButton_Click(object sender, RoutedEventArgs e)
         {
-
+            try
+            {
+                new BuyWindow(userInfo, AvalibleFlightsComboBox.Text.Substring(AvalibleFlightsComboBox.Text.IndexOf(" ")+1, 4)).Show();
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Рейс не выбран!");
+            }
+            
         }
     }
 }
