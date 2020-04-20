@@ -61,6 +61,15 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="AdminPanel\AddFlightWindow.xaml.cs">
+      <DependentUpon>AddFlightWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="AdminPanel\AddPlaneWindow.xaml.cs">
+      <DependentUpon>AddPlaneWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="AdminPanel\MainAdminMenu.xaml.cs">
+      <DependentUpon>MainAdminMenu.xaml</DependentUpon>
+    </Compile>
     <Compile Include="BuyWindow.xaml.cs">
       <DependentUpon>BuyWindow.xaml</DependentUpon>
     </Compile>
@@ -76,6 +85,18 @@
     <Compile Include="Registration.xaml.cs">
       <DependentUpon>Registration.xaml</DependentUpon>
     </Compile>
+    <Page Include="AdminPanel\AddFlightWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="AdminPanel\AddPlaneWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="AdminPanel\MainAdminMenu.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="ButtonTheme.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>

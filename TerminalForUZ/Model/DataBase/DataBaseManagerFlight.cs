@@ -115,7 +115,7 @@ namespace Model.DataBase
         /// Метод добавления рейса
         /// </summary>
         /// <param name="flight"></param>
-        public void Add(Flight flight)
+        public override void Add(Flight flight)
         {
             var flights = DeserializeFlight().ToList();
             flights.Add(flight);

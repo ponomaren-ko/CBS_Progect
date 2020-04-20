@@ -13,7 +13,8 @@ namespace Model.DataBase
     {
         public override string Path { get { return Directory.GetParent(Directory.GetCurrentDirectory()).Parent.Parent.FullName + "\\Model\\DataBase\\Planes_DataBase.xml"; ; } }
 
-       
+        
+
         public override  bool ChangeInfo(Plane newPlane)
         {
             
@@ -47,6 +48,11 @@ namespace Model.DataBase
         }
 
         public override  Plane Find( string Id)
+        {
+            throw new NotImplementedException();
+        }
+
+        public override void Add(Plane value)
         {
             throw new NotImplementedException();
         }

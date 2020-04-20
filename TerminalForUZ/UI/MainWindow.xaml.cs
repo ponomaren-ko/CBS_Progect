@@ -13,8 +13,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 using Controller;
-
-
+using UI.AdminPanel;
 
 namespace UI
 {
@@ -37,7 +36,16 @@ namespace UI
             if (accountInfo != null)
             {
                 MessageBox.Show("Welcome, " + accountInfo[1] );
-                new MainUserMenu(accountInfo).Show();
+                if (Convert.ToBoolean(accountInfo[0]) == true)
+                {
+                    new MainAdminMenu().Show();
+                }
+                else
+                {
+                    new MainUserMenu(accountInfo).Show();
+                    
+                }
+
                 this.Close();
 
             }
@@ -52,11 +60,8 @@ namespace UI
         private void RegisterButton_Click(object sender, RoutedEventArgs e)
         {
 
-            // Frame.Navigate(new Registration());
-          Owvner.Test();
-          Owvner.Test1();
-            
-          
+            Frame.Navigate(new Registration());
+                      
         }
 
         private void MainUserManuFrame_Navigated(object sender, NavigationEventArgs e)

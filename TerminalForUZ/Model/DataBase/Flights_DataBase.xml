@@ -45,4 +45,12 @@
     <DepartureTime>10:15</DepartureTime>
     <PlaneID>Airobus 350</PlaneID>
   </Flight>
+  <Flight>
+    <Staus>Сheck_In_Open</Staus>
+    <DeparturePoint>Киев</DeparturePoint>
+    <DestinationPoint>Львов</DestinationPoint>
+    <DepartureDate>22.05.2020</DepartureDate>
+    <DepartureTime>12:30</DepartureTime>
+    <PlaneID>3451</PlaneID>
+  </Flight>
 </ArrayOfFlight>

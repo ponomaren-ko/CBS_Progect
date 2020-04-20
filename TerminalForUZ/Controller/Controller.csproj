@@ -42,6 +42,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Administrator.cs" />
     <Compile Include="Authorization.cs" />
     <Compile Include="AuthotizationValidator.cs" />
     <Compile Include="FlightControlPanel.cs" />

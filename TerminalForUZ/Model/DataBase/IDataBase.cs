@@ -6,9 +6,9 @@ using System.Threading.Tasks;
 
 namespace Controller
 {
-    public interface IDataBase
+    public interface IDataBase<T>
     {
-        IEnumerable<Account> Accounts { get; }
-        void Add(Account account);
+        IEnumerable<T> Value { get; }
+        void Add(T value);
     }
 }

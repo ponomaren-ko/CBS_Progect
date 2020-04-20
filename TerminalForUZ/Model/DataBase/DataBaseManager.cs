@@ -26,6 +26,7 @@ namespace Model.DataBase
             return true;
         }
 
+        public abstract void Add(T value);
         abstract public  T Find(string id);
         public abstract bool ChangeInfo(T value);
 
