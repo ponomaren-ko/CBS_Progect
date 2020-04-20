@@ -35,7 +35,6 @@ namespace UI
 
             foreach (var item in sorted)
             {
-              
                 FlightFromComboBox.Items.Add(item);
                 FlightToComboBox.Items.Add(item);
             }
@@ -53,7 +52,7 @@ namespace UI
         {
             avalibleFlights = new List<string>();
         
-         string[,] result =  new FlightControlPanel().SearchFlights(FlightFromComboBox.Text,FlightToComboBox.Text);
+         string[,] result =  new FlightControlPanel().SearchFlights(FlightFromComboBox.SelectedItem.ToString(),FlightToComboBox.SelectedItem.ToString());
             try
             { 
                 avalibleFlights.Add(String.Format("ID: {0} ; AirCraft: {1} ; Date: {2} ; Time : {3}", result[0, 0], result[0, 1], result[0, 2], result[0, 3]));

@@ -47,6 +47,9 @@ namespace Model.DataBase
             return true;
         }
 
+
+
+
         public override Flight Find(string id)
         {
             List<Flight> accounts = new List<Flight>();
@@ -107,6 +110,11 @@ namespace Model.DataBase
             }
         }
 
+
+        /// <summary>
+        /// Метод добавления рейса
+        /// </summary>
+        /// <param name="flight"></param>
         public void Add(Flight flight)
         {
             var flights = DeserializeFlight().ToList();
@@ -117,6 +125,11 @@ namespace Model.DataBase
             }
         }
 
-        
+     //   public static Flight SwitchFlightStatus(Flight flight)
+     //   {
+     //           ! H  E  L  P !
+     //   }
+
+
     }
 }

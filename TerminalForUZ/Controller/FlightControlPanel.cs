@@ -19,7 +19,7 @@ namespace Controller
             for (int i = 0; i < flights.Length; i++)
             {
                 result[i, 0] = flights[i].Id;
-                result[i, 1] = flights[i].Plane;
+                result[i, 1] = flights[i].PlaneID;
                 result[i, 2] = flights[i].DepartureDate;
                 result[i, 3] = flights[i].DepartureTime;
             }

@@ -52,7 +52,11 @@ namespace UI
 
         private void RegisterButton_Click(object sender, RoutedEventArgs e)
         {
-           Frame.Navigate(new Registration());
+
+            // Frame.Navigate(new Registration());
+          Owvner.Test();
+          Owvner.Test1();
+            
           
         }
 

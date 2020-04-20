@@ -6,6 +6,14 @@ using System.Threading.Tasks;
 
 namespace Model.Entities
 {
+    public enum FlightStatus
+    {
+        Сheck_In, 
+        Сheck_In_Open, 
+        Open    
+
+    }
+
     public class Flight
     {
         public string Id { get; set; }
@@ -13,9 +21,8 @@ namespace Model.Entities
         public string DestinationPoint { get; set; }
         public string DepartureDate { get; set; }
         public string DepartureTime { get; set; }
-        public string Plane { get; set; }    
-        public string Staus { get; set; }
-
+        public string PlaneID { get; set; }
+        public FlightStatus Staus;
 
     }
 }

@@ -15,17 +15,17 @@ namespace Controller
     /// </summary>
     public class Owvner
     {  // Тест создания баз данных 
-      // public static bool Test()
-      // {
-      //     new DataBaseManagerFlight().CreateDB();
-      //     new DataBaseManagerPlane().CreateDB();
-      //     new DataBaseManagerCities().CreateDB();
-      //     return true;
-      // }
-      
-        public bool Test1()
+        public static bool Test()
         {
-            new DataBaseManagerFlight().Add(new Flight() { Id = "1",Plane = "Airobus 350", Staus = "Check-in", DeparturePoint = "Киев", DestinationPoint = "Львов", DepartureDate = "01/01/21", DepartureTime = "10:15"});
+            new DataBaseManagerFlight().CreateDB();
+           // new DataBaseManagerPlane().CreateDB();
+            
+            return true;
+        }
+
+        public static bool Test1()
+        {
+            new DataBaseManagerFlight().Add(new Flight() { Id = "0001",PlaneID = "Airobus 350", Staus = FlightStatus.Сheck_In, DeparturePoint = "Киев", DestinationPoint = "Львов", DepartureDate = "01/01/21", DepartureTime = "10:15"});
             return true;
         }
 
