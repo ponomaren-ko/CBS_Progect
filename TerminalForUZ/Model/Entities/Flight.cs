@@ -21,6 +21,7 @@ namespace Model.Entities
         public string DepartureDate { get; set; }
         public string DepartureTime { get; set; }
         public string PlaneID { get; set; }
+
         public FlightStatus Staus;
 
     }
