@@ -11,7 +11,6 @@ namespace Model.Entities
         Сheck_In, 
         Сheck_In_Open, 
         Open    
-
     }
 
     public class Flight

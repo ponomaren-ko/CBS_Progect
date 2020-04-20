@@ -39,8 +39,7 @@ namespace UI
                 MessageBox.Show("Welcome, " + accountInfo[1] );
                 new MainUserMenu(accountInfo).Show();
                 this.Close();
-                
-             
+
             }
            
             else
