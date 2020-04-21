@@ -34,7 +34,11 @@ namespace UI.AdminPanel
 
         private void AddFlight_Click(object sender, RoutedEventArgs e)
         {
-            Administrator.AddFlight("3451", "Киев", "Львов", "12:30", "22.05.2020", "Boeing-745");
+            Administrator.AddFlight( "Киев", "Львов", "12:30",   "01/08/2020", 777);
+            Administrator.AddFlight( "Киев", "Львов", "14:50",   "01/08/2020", 777);
+            Administrator.AddFlight( "Киев", "Варшава", "12:30", "01/08/2020", 777);
+            Administrator.AddFlight( "Киев", "Токио", "12:35",   "01/08/2020", 777);
+            Administrator.AddFlight( "Киев", "Токио", "12:55",   "01/08/2020", 777);
 
             MessageBox.Show("Рейс успешно добавлен");
         }

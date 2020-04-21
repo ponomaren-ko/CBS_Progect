@@ -18,10 +18,10 @@ namespace Controller
 
             for (int i = 0; i < flights.Length; i++)
             {
-                result[i, 0] = flights[i].Id;
-                result[i, 1] = flights[i].PlaneID;
-                result[i, 2] = flights[i].DepartureDate;
-                result[i, 3] = flights[i].DepartureTime;
+                result[i, 0] = flights[i].Id.ToString();
+                result[i, 1] = flights[i].PlaneID.ToString();
+                result[i, 2] = flights[i].DepartureDateTime.ToString();
+                
             }
 
             return result;

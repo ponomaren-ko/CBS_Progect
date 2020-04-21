@@ -53,9 +53,17 @@ namespace UI
             avalibleFlights = new List<string>();
         
          string[,] result =  new FlightControlPanel().SearchFlights(FlightFromComboBox.SelectedItem.ToString(),FlightToComboBox.SelectedItem.ToString());
+            this.result = result;
             try
-            { 
-                avalibleFlights.Add(String.Format("ID: {0} ; AirCraft: {1} ; Date: {2} ; Time : {3}", result[0, 0], result[0, 1], result[0, 2], result[0, 3]));
+            {
+                for (int i = 0; i < result.GetLength(0); i++)
+                {
+                    
+                        avalibleFlights.Add(String.Format("ID: {0}; AirCraft: {1}; DateTime: {2} ", result[i, 0], result[i, 1], result[i, 2]));
+                    
+
+                }
+                
                 AvalibleFlightsComboBox.ItemsSource = avalibleFlights;
             }
             catch(Exception)
@@ -69,7 +77,10 @@ namespace UI
         {
             try
             {
-                new BuyWindow(userInfo, AvalibleFlightsComboBox.Text.Substring(AvalibleFlightsComboBox.Text.IndexOf(" ")+1, 4)).Show();
+                int startOfId = AvalibleFlightsComboBox.Text.IndexOf(" ")+1;
+                int IdLenght = AvalibleFlightsComboBox.Text.IndexOf(";")- startOfId;
+                new BuyWindow(userInfo, AvalibleFlightsComboBox.Text.Substring(startOfId,IdLenght)).Show();
+                this.Close();
             }
             catch (Exception)
             {
@@ -77,5 +88,7 @@ namespace UI
             }
             
         }
+
+        
     }
 }

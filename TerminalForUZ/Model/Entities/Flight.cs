@@ -15,12 +15,11 @@ namespace Model.Entities
 
     public class Flight
     {
-        public string Id { get; set; }
+        public int Id { get; set; }
         public string DeparturePoint { get; set; }
         public string DestinationPoint { get; set; }
-        public string DepartureDate { get; set; }
-        public string DepartureTime { get; set; }
-        public string PlaneID { get; set; }
+        public DateTime DepartureDateTime { get; set; }
+        public int PlaneID { get; set; }
 
         public FlightStatus Staus;
 

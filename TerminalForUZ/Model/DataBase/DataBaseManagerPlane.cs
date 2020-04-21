@@ -47,7 +47,7 @@ namespace Model.DataBase
             return true;
         }
 
-        public override  Plane Find( string Id)
+        public override  Plane Find( int Id)
         {
             throw new NotImplementedException();
         }

@@ -10,14 +10,16 @@ namespace Controller
 {
     public class Administrator // Хранит методы по управлению контентом!(Добавление рейсов...?)
     {
-        public static void AddFlight(string id, string departurepoint, string destinationpoint, string departuretime, string deparuredate, string plane)
+        public static void AddFlight( string departurepoint, string destinationpoint, string departuretime, string departuredate, int plane)
         {
-            Flight testflight = new Flight();
-            testflight.PlaneID = id;
+            
+  
+
+            Flight testflight = new Flight();       
+            testflight.PlaneID = plane;
             testflight.DeparturePoint = departurepoint;
             testflight.DestinationPoint = destinationpoint;
-            testflight.DepartureTime = departuretime;
-            testflight.DepartureDate = deparuredate;
+            testflight.DepartureDateTime = Convert.ToDateTime(departuredate +" "+ departuretime);   //   "06 July 2008 7:32:47 AM"      
             testflight.Staus = FlightStatus.Сheck_In_Open;
 
             new DataBaseManagerFlight().Add(testflight);

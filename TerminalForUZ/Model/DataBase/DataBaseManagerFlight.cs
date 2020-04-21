@@ -50,7 +50,7 @@ namespace Model.DataBase
 
 
 
-        public override Flight Find(string id)
+        public override Flight Find(int id)
         {
             List<Flight> accounts = new List<Flight>();
             XmlSerializer serializer = new XmlSerializer(accounts.GetType());
@@ -118,6 +118,7 @@ namespace Model.DataBase
         public override void Add(Flight flight)
         {
             var flights = DeserializeFlight().ToList();
+            flight.Id = flights.Count + 1;
             flights.Add(flight);
             using (var fileStream = new FileStream(Path, FileMode.Create))
             {

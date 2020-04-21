@@ -30,7 +30,7 @@
 
         <ComboBox x:Name="FlightFromComboBox" Margin="139,33,3.8,33.6"  RenderTransformOrigin="0.022,1.051"></ComboBox>
         <ComboBox x:Name="FlightToComboBox"   Margin="139,33,3.8,33.6"   Grid.Row="1"> </ComboBox>
-        <ComboBox x:Name="AvalibleFlightsComboBox"   Margin="103.2,33,3.6,33.6"   Grid.Row="0" Grid.Column="1" > </ComboBox>
+        <ComboBox x:Name="AvalibleFlightsComboBox"   Margin="103.2,33,3.6,33.6"   Grid.Row="0" Grid.Column="1"  > </ComboBox>
         <Label Content="Fligth from:" FontSize="22" Foreground="Azure" HorizontalAlignment="Left" Margin="10,0,0,33.6" VerticalAlignment="Bottom" Height="39" Width="124" Grid.Row="0"/>
         <Label Content="Avalible:" FontSize="22" Foreground="Azure" HorizontalAlignment="Left" Margin="10,0,0,33.6" VerticalAlignment="Bottom" Height="39" Width="124" Grid.Row="0" Grid.Column ="1" />
         <Label Content="Fligth to:" FontSize="22" Foreground="Azure" HorizontalAlignment="Left" Margin="10" VerticalAlignment="Center" Height="38" Width="124" Grid.Row="1"/>

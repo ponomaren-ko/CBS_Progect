@@ -20,7 +20,7 @@ namespace UI
     public partial class BuyWindow : Window
     {
         static string[] accountInfo;
-        static string flightId;
+        
         public BuyWindow(string[] userInfo, string flightId)
         {
             InitializeComponent();
