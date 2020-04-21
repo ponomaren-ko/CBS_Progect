@@ -19,13 +19,15 @@ namespace UI
     /// </summary>
     public partial class BuyWindow : Window
     {
+        string CurrentFlightId { get; }
         static string[] accountInfo;
         
         public BuyWindow(string[] userInfo, string flightId)
         {
+            CurrentFlightId = flightId;
             InitializeComponent();
             IdLabel.Content = flightId;
-            accountInfo = userInfo;
+            accountInfo = userInfo;   
         }
 
         
