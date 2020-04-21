@@ -34,6 +34,8 @@ namespace UI.AdminPanel
 
         private void AddFlight_Click(object sender, RoutedEventArgs e)
         {
+            new AddFlightWindow().Show();
+            this.Close();
             MessageBox.Show("Рейс успешно добавлен");
         }
 
@@ -44,6 +46,11 @@ namespace UI.AdminPanel
         }
 
         private void RemovePlane_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void AddPlane_Click(object sender, RoutedEventArgs e)
         {
 
         }

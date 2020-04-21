@@ -28,7 +28,7 @@
 
 
         <Button FontSize = "22" x:Name="AddFlight" Margin="20" Content="Добавление рейса" HorizontalAlignment="Left"  Width="220" Grid.Column="0" Grid.Row="0" Grid.ColumnSpan="1" Click="AddFlight_Click"/>
-        <Button FontSize = "22" x:Name="AddPlane" Margin="20" Content="Добавление самолета" HorizontalAlignment="Left"  Width="220" Grid.Column="0" Grid.Row="1" Grid.ColumnSpan="1" Click="AddFlight_Click"/>
+        <Button FontSize = "22" x:Name="AddPlane" Margin="20" Content="Добавление самолета" HorizontalAlignment="Left"  Width="220" Grid.Column="0" Grid.Row="1" Grid.ColumnSpan="1" Click="AddPlane_Click"/>
         <Button FontSize = "22" x:Name="RemoveFlight" Margin="20" Content="Удаление рейса" HorizontalAlignment="Left"  Width="220" Grid.Column="0" Grid.Row="2" Grid.ColumnSpan="1" Click="RemoveFlight_Click"/>
         <Button FontSize = "22" x:Name="RemovePlane"  Margin="20" Content="Удаление самолета" HorizontalAlignment="Left"  Width="220" Grid.Column="1" Grid.Row="0" Grid.ColumnSpan="1"  Click="RemovePlane_Click"/>
         <Button FontSize = "22" Margin="20" Content="Button" HorizontalAlignment="Left"  Width="220" Grid.Column="1" Grid.Row="1" Grid.ColumnSpan="1" />

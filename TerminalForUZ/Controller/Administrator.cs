@@ -13,7 +13,6 @@ namespace Controller
         public static void AddFlight( string departurepoint, string destinationpoint, string departuretime, string departuredate, int plane)
         {
             
-  
 
             Flight testflight = new Flight();       
             testflight.PlaneID = plane;
