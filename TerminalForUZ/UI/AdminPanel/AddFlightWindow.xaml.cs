@@ -11,6 +11,7 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using Controller;
 
 namespace UI.AdminPanel
 {
@@ -22,6 +23,25 @@ namespace UI.AdminPanel
         public AddFlightWindow()
         {
             InitializeComponent();
+        }
+
+        private void AddFlight_Click(object sender, RoutedEventArgs e)
+        {
+            string departurepoint = Departure_TextBox.Text;
+            string destinationpoint = Destination_Textbox.Text;
+            string departuredate = Date_Textbox.Text;
+            string departuretime = Time_TextBox.Text;
+            int plane = Convert.ToInt32(PlaneID_TextBox.Text);
+
+            Administrator.AddFlight(departurepoint, destinationpoint, departuretime, departuredate, plane);
+
+            MessageBox.Show("Рейс добавлен");
+        }
+
+        private void Cancel_Button_Click(object sender, RoutedEventArgs e)
+        {
+            new MainAdminMenu().Show();
+            this.Close();
         }
     }
 }

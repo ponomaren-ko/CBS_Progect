@@ -34,13 +34,15 @@ namespace UI.AdminPanel
 
         private void AddFlight_Click(object sender, RoutedEventArgs e)
         {
-            Administrator.AddFlight( "Киев", "Львов", "12:30",   "01/08/2020", 777);
-            Administrator.AddFlight( "Киев", "Львов", "14:50",   "01/08/2020", 777);
-            Administrator.AddFlight( "Киев", "Варшава", "12:30", "01/08/2020", 777);
-            Administrator.AddFlight( "Киев", "Токио", "12:35",   "01/08/2020", 777);
-            Administrator.AddFlight( "Киев", "Токио", "12:55",   "01/08/2020", 777);
+            //Administrator.AddFlight( "Киев", "Львов", "12:30",   "01/08/2020", 777);
+            //Administrator.AddFlight( "Киев", "Львов", "14:50",   "01/08/2020", 777);
+            //Administrator.AddFlight( "Киев", "Варшава", "12:30", "01/08/2020", 777);
+            //Administrator.AddFlight( "Киев", "Токио", "12:35",   "01/08/2020", 777);
+            //Administrator.AddFlight( "Киев", "Токио", "12:55",   "01/08/2020", 777);
+            //MessageBox.Show("Рейс успешно добавлен");
 
-            MessageBox.Show("Рейс успешно добавлен");
+            new AddFlightWindow().Show();
+            this.Close();
         }
 
 
@@ -50,6 +52,11 @@ namespace UI.AdminPanel
         }
 
         private void RemovePlane_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void AddPlane_Click(object sender, RoutedEventArgs e)
         {
 
         }
