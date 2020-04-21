@@ -17,5 +17,6 @@ namespace Controller
         public string PhoneNumber { get; set; }
         public string Login { get; set; }        
         public string Password { get; set; }
+        public Ticket[] Tickets { get; set; }
     }
 }

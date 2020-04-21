@@ -19,7 +19,7 @@
     <Password>Test321@</Password>
   </Account>
   <Account>
-    <IsAdministrator>true</IsAdministrator>
+    <IsAdministrator>false</IsAdministrator>
     <Name>Bogdan</Name>
     <LastName>Ponomarenko</LastName>
     <Email>ponomarenko378@mail.ru</Email>

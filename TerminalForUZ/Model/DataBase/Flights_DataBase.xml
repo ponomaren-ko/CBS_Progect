@@ -88,4 +88,12 @@
     <DepartureDateTime>2020-04-21T13:43:00</DepartureDateTime>
     <PlaneID>4323</PlaneID>
   </Flight>
+  <Flight>
+    <Staus>Сheck_In_Open</Staus>
+    <Id>12</Id>
+    <DeparturePoint>Киев</DeparturePoint>
+    <DestinationPoint>Варшава</DestinationPoint>
+    <DepartureDateTime>2020-04-21T13:31:00</DepartureDateTime>
+    <PlaneID>3456</PlaneID>
+  </Flight>
 </ArrayOfFlight>
