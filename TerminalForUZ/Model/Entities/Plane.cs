@@ -6,12 +6,11 @@ using System.Threading.Tasks;
 
 namespace Model.Entities
 {
-    public class Plane
+    public class Plane : DataBaseEntity
     {
-        public string Id { get;}
         public string Model { get; }
 
-        public Plane(string id, string model)
+        public Plane(int id, string model)
         {
             Id = id;
             Model = model;

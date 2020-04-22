@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:UI"
         mc:Ignorable="d"
-        Title="BuyWindow" Height="450" Width="800">
+        Title="BuyWindow" Height="800" Width="820.261">
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition/>
@@ -16,8 +16,11 @@
             <RowDefinition/>
             <RowDefinition/>
             <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
         </Grid.RowDefinitions>
-        <Border Margin="0,0,-0.4,0" Grid.RowSpan="4" Grid.ColumnSpan="3" >
+        <Border Margin="0,0,-0.4,-0.4" Grid.RowSpan="7" Grid.ColumnSpan="2" >
             <Border.Background>
                 <LinearGradientBrush>
                     <GradientStop Color="Black" Offset="0.0"/>
@@ -25,13 +28,33 @@
                 </LinearGradientBrush>
             </Border.Background>
 
+
+
         </Border>
 
 
-        <Label  x:Name="IdLabel" Foreground="Azure"  FontSize="22" Margin="139,33,3.8,33.6"  RenderTransformOrigin="0.022,1.051"></Label>
-        <Label Content="Fligth № :" FontSize="22" Foreground="Azure" HorizontalAlignment="Left" Margin="10,0,0,33.6" VerticalAlignment="Bottom" Height="39" Width="124" Grid.Row="0"/>
-        <Button x:Name="CancelButton" Content="Cancel" Grid.Row="3" FontSize="22" Margin="20,19.8,206.8,20" Click="CancelButton_Click"/>
-        <Button x:Name="BuyButton" Content="Buy" Grid.Row="4" Grid.Column="1" FontSize="22" Margin="20" Click="BuyButton_Click"/>
+        <Label  x:Name="FlightIdLabel" Foreground="Azure"  FontSize="22" Margin="10,49,10.2,10"  RenderTransformOrigin="0.022,1.051"/>
+        <Label  x:Name="AccountNameLabel" Foreground="Azure"  FontSize="22" Margin="9.8,39,9.6,26"  RenderTransformOrigin="0.022,1.051" Grid.Column="1" Grid.Row="1"/>
+        <Label  x:Name="AccountLastNameLabel" Foreground="Azure"  FontSize="22" Margin="9.8,39,9.6,26"  RenderTransformOrigin="0.022,1.051" Grid.Column="1" Grid.Row="2"/>
+        <Label  x:Name="AccountNumberLabel" Foreground="Azure"  FontSize="22" Margin="407,36,9.6,29"  RenderTransformOrigin="0.022,1.051" Grid.ColumnSpan="2"/>
+        <Label  x:Name="DestinationLabel" Foreground="Azure"  FontSize="22" Margin="10,54,10.2,10"  RenderTransformOrigin="0.022,1.051" Grid.Row="1"/>
+        <Label  x:Name="DateTimeLable" Foreground="Azure"  FontSize="22" Margin="10,54,10.2,5"  RenderTransformOrigin="0.022,1.051" Grid.Row="2"/>
+        <Label  x:Name="PriceLable" Foreground="Azure"  FontSize="22" Margin="10,39,10.2,26"  RenderTransformOrigin="0.022,1.051" Grid.Row="5" Grid.Column="1"/>
+        <Label  x:Name="PlaneIdLabel" Foreground="Azure"  FontSize="22" Margin="10,54,10.2,10.2"  RenderTransformOrigin="0.022,1.051" Grid.Row="3" Grid.Column="0"/>
+
+        <Label Content="Рейс:" FontSize="22" Foreground="Azure" HorizontalAlignment="Left" Margin="10,0,0,39" VerticalAlignment="Bottom" Height="39" Width="63" Grid.Row="0"/>
+        <Label Content="Направление:" FontSize="22" Foreground="Azure" HorizontalAlignment="Left" Margin="10,0,0,34" VerticalAlignment="Bottom" Height="44" Width="153" Grid.Row="1"/>
+        <Label Content="Время:" FontSize="22" Foreground="Azure" HorizontalAlignment="Left" Margin="10,0,0,39" VerticalAlignment="Bottom" Height="39" Width="83" Grid.Row="2"/>
+        <Label Content="Борт номер:" FontSize="22" Foreground="Azure" HorizontalAlignment="Left" Margin="10,0,0,38.2" VerticalAlignment="Bottom" Height="39" Width="139" Grid.Row="3"/>
+
+
+
+        <Label Content="Имя:" FontSize="22" Foreground="Azure" HorizontalAlignment="Left" Margin="407,0,0,49" VerticalAlignment="Bottom" Height="39" Width="63" Grid.Row="1" Grid.ColumnSpan="2"/>
+        <Label Content="Фамилия:" FontSize="22" Foreground="Azure" HorizontalAlignment="Left" Margin="407,0,0,49" VerticalAlignment="Bottom" Height="39" Width="105" Grid.Row="2" Grid.ColumnSpan="2"/>
+        <Label Content="Номер телефона:" FontSize="22" Foreground="Azure" HorizontalAlignment="Left" Margin="407,-3,0,52" VerticalAlignment="Bottom" Height="39" Width="158" Grid.Row="0" Grid.ColumnSpan="2"/>
+        <Label Content="Цена:" FontSize="22" Foreground="Azure" HorizontalAlignment="Left" Margin="407,0,0,48.4" VerticalAlignment="Bottom" Height="39" Width="70" Grid.Row="4" Grid.RowSpan="2" Grid.ColumnSpan="2"/>
+        <Button x:Name="CancelButton" Content="Cancel" Grid.Row="6" FontSize="22" Margin="10,29.6,217.2,9.6" Click="CancelButton_Click"/>
+        <Button x:Name="BuyButton" Content="Buy" Grid.Row="6" Grid.Column="1" FontSize="22" Margin="174.8,29.6,9.6,10.6" Click="BuyButton_Click"/>
 
     </Grid>
 </Window>

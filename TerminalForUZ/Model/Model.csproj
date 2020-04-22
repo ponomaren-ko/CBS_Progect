@@ -46,9 +46,10 @@
     <Compile Include="DataBase\DataBaseManagerAccounts.cs" />
     <Compile Include="DataBase\DataBaseManagerFlight.cs" />
     <Compile Include="DataBase\DataBaseManagerPlane.cs" />
+    <Compile Include="DataBase\DataBaseManagerTickets.cs" />
     <Compile Include="DataBase\IDataBase.cs" />
     <Compile Include="Entities\Account.cs" />
-    <Compile Include="Entities\Administrator.cs" />
+    <Compile Include="Entities\DataBaseEntity.cs" />
     <Compile Include="Entities\Flight.cs" />
     <Compile Include="Entities\Plane.cs" />
     <Compile Include="Entities\Ticket.cs" />
@@ -59,6 +60,7 @@
     <Content Include="DataBase\Cities_DataBase.xml" />
     <Content Include="DataBase\Flights_DataBase.xml" />
     <Content Include="DataBase\Planes_DataBase.xml" />
+    <Content Include="DataBase\Tickets_DataBase.xml" />
   </ItemGroup>
   <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

@@ -38,33 +38,36 @@ namespace UI
                 FlightFromComboBox.Items.Add(item);
                 FlightToComboBox.Items.Add(item);
             }
-            // Нужно получить массив строк с названиями городов и добавить их в оба комбобокса
+            //TODO: Нужно получить массив строк с названиями городов и добавить их в оба комбобокса
         }
 
         private void CancelButton_Click(object sender, RoutedEventArgs e)
         {     
             new MainUserMenu(userInfo).Show();
             this.Close();
-
         }
 
         private void SearchButton_Click(object sender, RoutedEventArgs e)
         {
             avalibleFlights = new List<string>();
         
-         string[,] result =  new FlightControlPanel().SearchFlights(FlightFromComboBox.SelectedItem.ToString(),FlightToComboBox.SelectedItem.ToString());
+            string[,] result =  new FlightControlPanel().SearchFlights(FlightFromComboBox.SelectedItem.ToString(),FlightToComboBox.SelectedItem.ToString());
             this.result = result;
             try
             {
                 for (int i = 0; i < result.GetLength(0); i++)
+                {                
+                        avalibleFlights.Add(String.Format("ID: {0}; AirCraft: {1}; DateTime: {2} ", result[i, 0], result[i, 1], result[i, 2]));    
+                }
+                if (avalibleFlights.Count != 0)
                 {
-                    
-                        avalibleFlights.Add(String.Format("ID: {0}; AirCraft: {1}; DateTime: {2} ", result[i, 0], result[i, 1], result[i, 2]));
-                    
-
+                    AvalibleFlightsComboBox.ItemsSource = avalibleFlights;
+                    MessageBox.Show("Найдено рейсов с указаным направление: " + avalibleFlights.Count);
                 }
                 
-                AvalibleFlightsComboBox.ItemsSource = avalibleFlights;
+                else
+                    MessageBox.Show("Рейсов с указаным маршрутом не найдено ");
+
             }
             catch(Exception)
             {
@@ -85,8 +88,7 @@ namespace UI
             catch (Exception)
             {
                 MessageBox.Show("Рейс не выбран!");
-            }
-            
+            }  
         }
 
         

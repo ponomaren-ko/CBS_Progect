@@ -15,10 +15,10 @@ namespace Controller
     public class Authorization
     {
 
-        //TODO: Доделать проверку по паролю
+        
         public static string[] SignIn(string login, string password)
         {
-            Account account = DataBaseManagerAccounts.Find(login, password);
+            Account account = new DataBaseManagerAccounts().Find(login, password);
             if (account != null)
             {
                 string[] accountInfo = new string[7];
@@ -72,7 +72,7 @@ namespace Controller
                 return false;
             }
 
-            return DataBaseManagerAccounts.ChangeInfo(account);
+            return new DataBaseManagerAccounts().ChangeInfo(account);
             
 
         }

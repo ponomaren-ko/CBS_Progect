@@ -1,15 +1,29 @@
-﻿using System;
+﻿
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Controller
+namespace Model.Entities
 {
-    public class Ticket  //Не знаю стоит ли такое реализовывать , думал сделать так, что бы на аккаунте был массив этих билетов
+    public class Ticket : DataBaseEntity    
     {
-        public string TicketID { get; set; }   
+        public string FlightID { get; set; }    
+        public string UserNumber { get; set; }
         public string Place { get; set; }
-        public bool Active { get; set; } //Активный неактивный билет(до вылета актив после неактив)
+        public bool IsActive { get; set; } //Активный неактивный билет(до вылета актив после неактив)
+
+        public Ticket(string flightId, string userNumber)
+        {
+            FlightID = flightId;
+            UserNumber = userNumber;
+            IsActive = true;
+        }
+        public Ticket()
+        {
+
+        }
+
     }   
 }

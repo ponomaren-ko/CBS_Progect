@@ -1,14 +1,16 @@
-﻿using System;
+﻿using Model.Entities;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Xml.Serialization;
 
+
 namespace Controller
 {
 
-    public class Account
+    public class Account: DataBaseEntity
     {             
         public bool IsAdministrator { get; set; }       
         public string Name { get; set; }

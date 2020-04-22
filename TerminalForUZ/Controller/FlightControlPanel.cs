@@ -26,5 +26,24 @@ namespace Controller
 
             return result;
         }
+        public string[] SearchFlight(int id)
+        {
+            Flight flight = new DataBaseManagerFlight().Find(id);
+            string[] result = new string[5];
+            result[0] = flight.Id.ToString();
+            result[1] = flight.DeparturePoint;
+            result[2] = flight.DestinationPoint;
+            result[3] = flight.DepartureDateTime.ToString();
+            result[4] = flight.PlaneID.ToString();
+            
+            return result;
+        }
+
+        public static bool SaveTicket(string flightId, string userPhoneNumber, string departurePoint, string destinationPoint, string departureDatetime)
+        {
+          Ticket ticket = new Ticket(flightId, userPhoneNumber) { IsActive = true, Place ="44D" };
+            new DataBaseManagerTickets().Add(ticket);
+            return true;
+        }
     }
 }
