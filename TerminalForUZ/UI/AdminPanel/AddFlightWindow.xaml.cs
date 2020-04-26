@@ -31,9 +31,9 @@ namespace UI.AdminPanel
             string destinationpoint = Destination_Textbox.Text;
             string departuredate = Date_Textbox.Text;
             string departuretime = Time_TextBox.Text;
-            int plane = Convert.ToInt32(PlaneID_TextBox.Text);
+            string planeId = PlaneID_TextBox.Text;
 
-            Administrator.AddFlight(departurepoint, destinationpoint, departuretime, departuredate, plane);
+            Administrator.AddFlight(departurepoint, destinationpoint, departuretime, departuredate, planeId);
 
             MessageBox.Show("Рейс добавлен");
         }

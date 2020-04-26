@@ -34,7 +34,6 @@ namespace Controller
             else
                 return null;
 
-
         }
 
         public static bool ChnageAccountInfo(string[] accountInfo)

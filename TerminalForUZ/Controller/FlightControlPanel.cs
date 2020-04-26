@@ -41,7 +41,7 @@ namespace Controller
 
         public static bool SaveTicket(string flightId, string userPhoneNumber, string departurePoint, string destinationPoint, string departureDatetime)
         {
-          Ticket ticket = new Ticket(flightId, userPhoneNumber) { IsActive = true, Place ="44D" };
+          Ticket ticket = new Ticket(flightId, userPhoneNumber) { IsActive = true };
             new DataBaseManagerTickets().Add(ticket);
             return true;
         }

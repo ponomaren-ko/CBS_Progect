@@ -4,16 +4,17 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{0FA112DD-0AFD-452D-A18C-3EC839C4F15C}</ProjectGuid>
-    <OutputType>Library</OutputType>
-    <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Model</RootNamespace>
-    <AssemblyName>Model</AssemblyName>
+    <ProjectGuid>{FE4C1645-003C-4BEE-9802-404D3BEFAE86}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <RootNamespace>TestDB</RootNamespace>
+    <AssemblyName>TestDB</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     <Deterministic>true</Deterministic>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
@@ -23,6 +24,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugType>pdbonly</DebugType>
     <Optimize>true</Optimize>
     <OutputPath>bin\Release\</OutputPath>
@@ -41,29 +43,17 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="DataBase\DataBase.cs" />
-    <Compile Include="DataBase\DataBaseManager.cs" />
-    <Compile Include="DataBase\DataBaseManagerAccounts.cs" />
-    <Compile Include="DataBase\DataBaseManagerFlight.cs" />
-    <Compile Include="DataBase\DataBaseManagerPlane.cs" />
-    <Compile Include="DataBase\DataBaseManagerTickets.cs" />
-    <Compile Include="DataBase\IDataBase.cs" />
-    <Compile Include="Entities\Account.cs" />
-    <Compile Include="Entities\DataBaseEntity.cs" />
-    <Compile Include="Entities\Flight.cs" />
-    <Compile Include="Entities\Plane.cs" />
-    <Compile Include="Entities\Ticket.cs" />
+    <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="SQL\DBSQLServerUtils.cs" />
-    <Compile Include="SQL\DBUtils.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="DataBase\Accounts_DataBase.xml" />
-    <Content Include="DataBase\Cities_DataBase.xml" />
-    <Content Include="DataBase\Flights_DataBase.xml" />
-    <Content Include="DataBase\Planes_DataBase.xml" />
-    <Content Include="DataBase\Tickets_DataBase.xml" />
+    <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <ProjectReference Include="..\Model\Model.csproj">
+      <Project>{0fa112dd-0afd-452d-a18c-3ec839c4f15c}</Project>
+      <Name>Model</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
